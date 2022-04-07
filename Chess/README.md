@@ -1,16 +1,6 @@
 Chess game project (In Console)
 The initial chess board and prompt would be like:
-bR bN bB bQ bK bB bN bR 8
-bp bp bp bp bp bp bp bp 7
-##    ##    ##    ##    6
-   ##    ##    ##    ## 5
-##    ##    ##    ##    4
-   ##    ##    ##    ## 3
-wp wp wp wp wp wp wp wp 2
-wR wN wB wQ wK wB wN wR 1
- a  b  c  d  e  f  g  h 
-
-White's move: 
+![image](https://user-images.githubusercontent.com/97966722/162096808-c60c0991-1da6-46fb-81c9-25ce8481eadd.png)
 
 Here is the basic description of the game
 Each character represents a piece:
