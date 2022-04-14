@@ -1,2 +1,2 @@
 # Software-Methodology
-Here are course projects that my partner and I made in the junior year.
+Here are course projects with Java that my partner and I built in 2022 Spring.
