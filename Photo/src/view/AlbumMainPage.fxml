@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AlbumMainController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="154.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="BackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClickOnBack" text="Back" />
+            <ScrollPane fx:id="ThumbnailScroll" layoutX="-1.0" layoutY="83.0" prefHeight="200.0" prefWidth="156.0">
+               <content>
+                  <TilePane fx:id="ThumbnailPane" prefHeight="190.0" prefWidth="150.0" />
+               </content>
+            </ScrollPane>
+            <Button fx:id="CopyButton" layoutX="8.0" layoutY="297.0" mnemonicParsing="false" onAction="#ClickOnCopy" text="Copy" />
+            <Button fx:id="MoveButton" layoutX="86.0" layoutY="297.0" mnemonicParsing="false" onAction="#ClickOnMove" text="Move" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="LeftSlideButton" layoutX="67.0" layoutY="300.0" mnemonicParsing="false" onAction="#SlideLeft" text="&lt;-" />
+            <Button fx:id="RightSlideButton" layoutX="150.0" layoutY="300.0" mnemonicParsing="false" onAction="#SlideRight" text="-&gt;" />
+            <Label fx:id="AlbumName" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="230.0" text="Album name" wrapText="true" />
+            <BorderPane fx:id="ChosenPhotoPane" layoutX="24.0" layoutY="79.0" prefHeight="213.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+            <Text layoutX="15.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caption:" />
+            <Text layoutX="15.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag(Name | Value):" />
+            <TextField fx:id="CaptionEditText" alignment="TOP_LEFT" layoutX="14.0" layoutY="93.0" prefHeight="58.0" prefWidth="161.0" visible="false" />
+            <Label fx:id="CaptionText" alignment="TOP_LEFT" layoutX="14.0" layoutY="93.0" prefHeight="58.0" prefWidth="161.0" wrapText="true" />
+            <ListView fx:id="TagList" layoutX="14.0" layoutY="168.0" prefHeight="165.0" prefWidth="161.0" />
+            <TextField fx:id="NewTagKey" alignment="TOP_LEFT" layoutX="15.0" layoutY="212.0" prefHeight="50.0" promptText="Enter tag name here" visible="false" />
+            <TextField fx:id="NewTagValue" alignment="TOP_LEFT" layoutX="14.0" layoutY="272.0" prefHeight="50.0" promptText="Enter tag value here" visible="false" />
+            <Label fx:id="DateLabel" layoutX="13.0" layoutY="48.0" />
+            <ChoiceBox fx:id="tagChoice" layoutX="19.0" layoutY="176.0" prefWidth="150.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane id="BottomPane" prefHeight="64.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane id="AddTagPane" fx:id="AddTagPane" prefHeight="200.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="AddTagConfirmButtion" layoutX="183.0" layoutY="20.0" mnemonicParsing="false" onAction="#AddTagConfirmation" text="Add tag confirm" />
+                  <Button layoutX="318.0" layoutY="20.0" mnemonicParsing="false" onAction="#AddTagCancel" text="Cancel" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="MainFunctionPane" fx:id="AlbumFunctionPane" layoutY="-3.0" prefHeight="64.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="DeletePhotoButton" layoutX="88.0" layoutY="20.0" mnemonicParsing="false" onAction="#DeletePhoto" style="-fx-background-color: #EC340D#EC340D;" text=" Delete Photo" textFill="WHITE" />
+                  <Button fx:id="AddPhotoButton" layoutX="3.0" layoutY="20.0" mnemonicParsing="false" onAction="#AddPhoto" style="-fx-background-color: #1F82F9#1F82F9;" text="Add Photo" textFill="WHITE" />
+                  <Button fx:id="CaptionOrRecaptionButton" layoutX="190.0" layoutY="20.0" mnemonicParsing="false" onAction="#CaptionOrRecaption" text="Caption/Recaption" />
+                  <Button fx:id="AddTagButton" layoutX="323.0" layoutY="20.0" mnemonicParsing="false" onAction="#AddTag" text="Add Tag" />
+                  <Button fx:id="DeleteTagButton" layoutX="400.0" layoutY="20.0" mnemonicParsing="false" onAction="#DeleteTag" text="Delete Tag" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="LogoutButton" layoutX="500.0" layoutY="20.0" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: #E31B07#E31B07;" text="Log out" textFill="WHITE" />
+            <AnchorPane id="CaptionPane" fx:id="CaptionOrRecaptionPane" prefHeight="200.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="CaptionOrRecaptionConfirmButton" layoutX="183.0" layoutY="20.0" mnemonicParsing="false" onAction="#CaptionOrRecaptionConfirmation" text="Caption/Recaption Confirm" />
+                  <Button fx:id="CaptionOrRecaptionCancel" layoutX="367.0" layoutY="20.0" mnemonicParsing="false" onAction="#CaptionOrRecaptionCancel" text="Cancel" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
