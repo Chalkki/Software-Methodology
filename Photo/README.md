@@ -1,5 +1,6 @@
 This is a photo library for user to upload their photos, and the data of each user would be stored by serialization. 
 See assignment details in the html file.
+
 Login page
 -
 ![image](https://user-images.githubusercontent.com/97966722/168407609-1c359d66-14a3-4d54-95e1-4c8558c2fa0a.png)
