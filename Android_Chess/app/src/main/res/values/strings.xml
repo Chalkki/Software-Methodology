@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidChess</string>
+    <string name="Chessboard">Chess board</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673AB7">
+
+    <Button
+        android:id="@+id/promotion_queen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="20dp"
+        android:text="Queen"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/promotion_knight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Knight"
+        app:layout_constraintEnd_toEndOf="@+id/promotion_bishop"
+        app:layout_constraintTop_toBottomOf="@+id/promotion_bishop" />
+
+    <Button
+        android:id="@+id/promotion_rook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Rook"
+        app:layout_constraintStart_toStartOf="@+id/promotion_knight"
+        app:layout_constraintTop_toBottomOf="@+id/promotion_knight" />
+
+    <Button
+        android:id="@+id/promotion_bishop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bishop"
+        app:layout_constraintEnd_toEndOf="@+id/promotion_queen"
+        app:layout_constraintTop_toBottomOf="@+id/promotion_queen" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="44dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Choose a piece for promotion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

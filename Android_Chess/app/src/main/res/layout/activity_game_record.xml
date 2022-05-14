@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:barrierMargin="10dp"
+    tools:context=".GameRecordActivity">
+
+
+    <ListView
+        android:id="@+id/recordList"
+        android:layout_width="match_parent"
+        android:layout_height="582dp"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp"
+        android:clipToPadding="false" />
+
+
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="19dp"
+        android:text="sort by date" />
+
+    <Button
+        android:id="@+id/nameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="19dp"
+        android:text="sort by name" />
+
+    <Button
+        android:id="@+id/gobackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:text="back" />
+</RelativeLayout>
